@@ -8,7 +8,8 @@ jobs:
       - run:
           name: Greeting
           command:  apt-get update && apt-get install -y --no-install-recommends &&  apt-get install -y g++
+                    g++ main.cpp -o mango
       - run:
           name: Print the Current Time
-          command: date
+          command: date && ./mango
  
