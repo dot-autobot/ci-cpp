@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command:  apt-get update && apt-get install -y --no-install-recommends &&  apt-get install -y g++ && g++ main.cpp
+          command:  apt-get update && apt-get install -y --no-install-recommends &&  apt-get install -y g++ && g++ main.cpp && ./a.out
                    
       - run:
           name: Print the Current Time
