@@ -1,14 +1,22 @@
 version: 2
 jobs:
-  build:
+   build:
     docker:
       - image: debian:stretch
     steps:
       - checkout
       - run:
           name: Greeting
-          command:  apt-get update && apt-get install -y --no-install-recommends &&  apt-get install -y g++ && g++ main.cpp 
-                    ./a.out
+          command:
+                  if [ -f CMakeLists.txt ]
+                  then
+                      apt-get update && apt-get install -y --no-install-recommends &&  apt-get install -y g++ && g++ main.cpp 
+                      ./a.out       
+                 else
+               
+               echo "no cpp files found"
+              fi  
+                   
                    
       - run:
           name: Print the Current Time
