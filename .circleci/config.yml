@@ -7,18 +7,16 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command:
-                  if [ -f main.cpp]
+          command: |
+                  if[-f main.cpp]
                   then
                       apt-get update && apt-get install -y --no-install-recommends &&  apt-get install -y g++ && g++ main.cpp 
                       ./a.out       
                  else
-               
-               echo "no cpp files found"
+                     echo "no cpp files found"
               fi  
                    
-                   
-      - run:
+                         - run:
           name: Print the Current Time
           command: date 
  
