@@ -16,7 +16,7 @@ jobs:
                      echo "no cpp files found"
               fi  
                    
-                         - run:
+   -run:
           name: Print the Current Time
           command: date 
  
