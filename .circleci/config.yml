@@ -7,7 +7,8 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command: g++ main.cpp
+          command:  apt-get upate 
+                    apt-get install g++
       - run:
           name: Print the Current Time
           command: date
